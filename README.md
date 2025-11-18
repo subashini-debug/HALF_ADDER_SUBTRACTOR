@@ -54,21 +54,35 @@ half Subtractor
 
 
 **Program:**
+
 half adder
+
 module sumcarry(a,b,s,c);
+
 input a,b;
+
 output s,c;
+
 xor g1(s,a,b);
+
 and g2(c,a,b);
+
 endmodule
 
 half subtractor
+
 module diffb(a,b,B,D);
+
 input a,b;
+
 output B,D;
+
 assign D=(a^b);
+
 assign B=(~a&b);
+
 endmodule
+
 
 
 
