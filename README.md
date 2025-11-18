@@ -34,6 +34,11 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+half adder
+<img width="254" height="198" alt="tru" src="https://github.com/user-attachments/assets/42b63b81-e62a-475f-8554-af7ef0574fc3" />
+half Subtractor
+<img width="590" height="345" alt="Halftruthtable" src="https://github.com/user-attachments/assets/adf0ddd4-c3c7-4fe7-875d-94868b8b4834" />
+
 
 **Procedure**
 
@@ -49,13 +54,38 @@ Figure -02 HALF Subtractor
 
 
 **Program:**
+half adder
+module sumcarry(a,b,s,c);
+input a,b;
+output s,c;
+xor g1(s,a,b);
+and g2(c,a,b);
+endmodule
 
-/* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+half subtractor
+module diffb(a,b,B,D);
+input a,b;
+output B,D;
+assign D=(a^b);
+assign B=(~a&b);
+endmodule
 
-Developed by: RegisterNumber:*/
+
 
 **RTL Schematic**
+half adder
+<img width="1920" height="1080" alt="Screenshot (94)" src="https://github.com/user-attachments/assets/85e8a454-6b81-451f-8822-0d2d2e908112" />
+
+half subtractor
+<img width="1920" height="1080" alt="Screenshot (96)" src="https://github.com/user-attachments/assets/4f970ad9-0842-4d32-bf79-299857ca94c6" />
+
+
 
 **Output/TIMING Waveform**
+<img width="1920" height="1080" alt="Screenshot (95)" src="https://github.com/user-attachments/assets/16ca5a32-af4f-4484-a0db-7a59c8cc43d0" />
 
-**Result:**
+half subtractor
+<img width="1920" height="1080" alt="Screenshot (95)" src="https://github.com/user-attachments/assets/9c9e7baf-b1cf-454c-aba7-c75a9f096e5f" />
+
+**Result:** 
+Thus the given logic combinational circuits are implemented using and their operations are verified using Verilog programming.
